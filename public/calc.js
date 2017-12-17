@@ -183,7 +183,7 @@ var displayNumKB = function(e){
 
 var displayKB = function(e){
   var key = [];
-  if((e.key) === '='){
+  if((e.key === '=') || (e.which == 13 || e.keyCode == 13)){
     answer();
   }
   else if((e.key) === 'clear'){
