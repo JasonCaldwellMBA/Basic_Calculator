@@ -141,7 +141,14 @@ $('#clear').click(function(e){
 
 var answer = function(){
   var ans = $('#display').text();
-  ans = eval(ans);
+  // After research I think I'm controlling the input and that this calculator is small enough that I can safely use eval() - 12/16/17
+  try{
+    ans = eval(ans);
+  }
+  catch(e){
+    alert('Math ERROR! Sorry, please try your calculation again.');
+    calcString = '';
+  }
   $('#display').text(ans);
   calcString = '';
 };
