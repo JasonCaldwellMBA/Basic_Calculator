@@ -127,7 +127,6 @@ var displayOp = function(e){
     }
     calcString += op;
     $('#display').text(calcString);
-    console.log(calcString);
   }
 };
 
@@ -141,6 +140,8 @@ $('#clear').click(function(e){
 });
 
 var answer = function(){
-  $('#display').text('Answer');
+  var ans = $('#display').text();
+  ans = eval(ans);
+  $('#display').text(ans);
   calcString = '';
 };
