@@ -183,7 +183,7 @@ var displayNumKB = function(e){
 
 var displayKB = function(e){
   var key = [];
-  if((e.key) === 'KEY_RETURN'){
+  if((e.key) === '='){
     answer();
   }
   else if((e.key) === 'clear'){
