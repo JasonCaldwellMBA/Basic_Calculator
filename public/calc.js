@@ -1,5 +1,4 @@
-calcString = '';
-
+// =============== Page Display ===============
 var formatCalc = function(){
   // Experimenting with jQuery css options
   $('h1, table')
@@ -51,7 +50,10 @@ jQuery.fn.center = function () {
 	return this;
 }
 
-var displayNum = function(e){
+// =============== Click Events ===============
+calcString = '';
+
+var displayNumClick = function(e){
   var num = [];
   switch(e['target'].id){
     case '0':
@@ -85,16 +87,19 @@ var displayNum = function(e){
       num = '9'
       break;
     default:
-      $('#display').text('Unknown entry')
+      alert('Unknown button pressed. Please try again.');
   }
   calcString += num;
   $('#display').text(calcString);
 };
 
-var displayOp = function(e){
+var displayOpClick = function(e){
   var op = [];
   if((e['target'].id) === 'equals'){
-    answer()
+    answer();
+  }
+  else if((e['target'].id) === 'clear'){
+    clear();
   }
   else {
     switch(e['target'].id){
@@ -123,21 +128,139 @@ var displayOp = function(e){
         op = ')'
         break;
       default:
-        $('#display').text('Unknown entry')
+        alert('Unknown button pressed. Please try again.');
     }
     calcString += op;
     $('#display').text(calcString);
   }
 };
 
-$('.number').click(displayNum);
+$('.number').click(displayNumClick);
 
-$('.operator').click(displayOp);
+$('.operator').click(displayOpClick);
 
-$('#clear').click(function(e){
+// =============== Keyboard Events ===============
+
+var displayNumKB = function(e){
+  var num = [];
+  switch(e.key){
+    case '0':
+      num = '0'
+      break;
+    case '1':
+      num = '1'
+      break;
+    case '2':
+      num = '2'
+      break;
+    case '3':
+      num = '3'
+      break;
+    case '4':
+      num = '4'
+      break;
+    case '5':
+      num = '5'
+      break;
+    case '6':
+      num = '6'
+      break;
+    case '7':
+      num = '7'
+      break;
+    case '8':
+      num = '8'
+      break;
+    case '9':
+      num = '9'
+      break;
+    default:
+      alert('Unknown key pressed. Please try again.');
+  }
+  calcString += num;
+  $('#display').text(calcString);
+};
+
+var displayKB = function(e){
+  var key = [];
+  if((e.key) === 'KEY_RETURN'){
+    answer();
+  }
+  else if((e.key) === 'clear'){
+    clear();
+  }
+  else {
+    switch(e.key){
+      case '/':
+        key = '/'
+        break;
+      case '-':
+        key = '-'
+        break;
+      case '+':
+        key = '+'
+        break;
+      case '*':
+        key = '*'
+        break;
+      case '.':
+        key = '.'
+        break;
+      case '-':
+        key = '-'
+        break;
+      case '(':
+        key = '('
+        break;
+      case ')':
+        key = ')'
+        break;
+      case '0':
+        key = '0'
+        break;
+      case '1':
+        key = '1'
+        break;
+      case '2':
+        key = '2'
+        break;
+      case '3':
+        key = '3'
+        break;
+      case '4':
+        key = '4'
+        break;
+      case '5':
+        key = '5'
+        break;
+      case '6':
+        key = '6'
+        break;
+      case '7':
+        key = '7'
+        break;
+      case '8':
+        key = '8'
+        break;
+      case '9':
+        key = '9'
+        break;
+      default:
+        alert('Unknown key pressed. Please try again.');
+    }
+    calcString += key;
+    $('#display').text(calcString);
+  }
+};
+
+$(document).keypress(displayKB);
+
+// =============== Calculations or Clear ===============
+
+var clear = function(){
   $('#display').text('');
   calcString = '';
-});
+};
 
 var answer = function(){
   var ans = $('#display').text();
