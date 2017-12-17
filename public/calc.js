@@ -183,10 +183,11 @@ var displayNumKB = function(e){
 
 var displayKB = function(e){
   var key = [];
-  if((e.key === '=') || (e.which == 13 || e.keyCode == 13)){
+  if((e.key === '=') || (e.which === 13 || e.keyCode === 13)){
     answer();
   }
-  else if((e.key) === 'clear'){
+  // Unable to get delete key to clear
+  else if(e.key === 'Z'){
     clear();
   }
   else {
