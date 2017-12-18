@@ -53,48 +53,9 @@ jQuery.fn.center = function () {
 // =============== Click Events ===============
 calcString = '';
 
-var displayNumClick = function(e){
-  var num = [];
-  switch(e['target'].id){
-    case '0':
-      num = '0'
-      break;
-    case '1':
-      num = '1'
-      break;
-    case '2':
-      num = '2'
-      break;
-    case '3':
-      num = '3'
-      break;
-    case '4':
-      num = '4'
-      break;
-    case '5':
-      num = '5'
-      break;
-    case '6':
-      num = '6'
-      break;
-    case '7':
-      num = '7'
-      break;
-    case '8':
-      num = '8'
-      break;
-    case '9':
-      num = '9'
-      break;
-    default:
-      alert('Unknown button pressed. Please try again.');
-  }
-  calcString += num;
-  $('#display').text(calcString);
-};
-
-var displayOpClick = function(e){
-  var op = [];
+var displayClick = function(e){
+  var click = [];
+  console.log(click);
   if((e['target'].id) === 'equals'){
     answer();
   }
@@ -104,82 +65,53 @@ var displayOpClick = function(e){
   else {
     switch(e['target'].id){
       case 'divide':
-        op = '/'
-        break;
+        click = '/'; break;
       case 'subtract':
-        op = '-'
-        break;
+        click = '-'; break;
       case 'add':
-        op = '+'
-        break;
+        click = '+'; break;
       case 'multiply':
-        op = '*'
-        break;
+        click = '*'; break;
       case 'decimal':
-        op = '.'
-        break;
+        click = '.'; break;
       case 'negate':
-        op = '-'
-        break;
+        click = '-'; break;
       case 'parenOpen':
-        op = '('
-        break;
+        click = '('; break;
       case 'parenClose':
-        op = ')'
-        break;
+        click = ')'; break;
+      case '0':
+        click = '0'; break;
+      case '1':
+        click = '1'; break;
+      case '2':
+        click = '2'; break;
+      case '3':
+        click = '3'; break;
+      case '4':
+        click = '4'; break;
+      case '5':
+        click = '5'; break;
+      case '6':
+        click = '6'; break;
+      case '7':
+        click = '7'; break;
+      case '8':
+        click = '8'; break;
+      case '9':
+        click = '9'; break;
       default:
         alert('Unknown button pressed. Please try again.');
     }
-    calcString += op;
+    calcString += click;
     $('#display').text(calcString);
   }
 };
 
-$('.number').click(displayNumClick);
-
-$('.operator').click(displayOpClick);
+$('.number').click(displayClick);
+$('.operator').click(displayClick);
 
 // =============== Keyboard Events ===============
-
-var displayNumKB = function(e){
-  var num = [];
-  switch(e.key){
-    case '0':
-      num = '0'
-      break;
-    case '1':
-      num = '1'
-      break;
-    case '2':
-      num = '2'
-      break;
-    case '3':
-      num = '3'
-      break;
-    case '4':
-      num = '4'
-      break;
-    case '5':
-      num = '5'
-      break;
-    case '6':
-      num = '6'
-      break;
-    case '7':
-      num = '7'
-      break;
-    case '8':
-      num = '8'
-      break;
-    case '9':
-      num = '9'
-      break;
-    default:
-      alert('Unknown key pressed. Please try again.');
-  }
-  calcString += num;
-  $('#display').text(calcString);
-};
 
 var displayKB = function(e){
   var key = [];
@@ -187,65 +119,47 @@ var displayKB = function(e){
     answer();
   }
   // Unable to get delete key to clear
-  else if(e.key === 'Z'){
+  else if(e.key === 'C' || e.key === 'c'){
     clear();
   }
   else {
     switch(e.key){
       case '/':
-        key = '/'
-        break;
+        key = '/'; break;
       case '-':
-        key = '-'
-        break;
+        key = '-'; break;
       case '+':
-        key = '+'
-        break;
+        key = '+'; break;
       case '*':
-        key = '*'
-        break;
+        key = '*'; break;
       case '.':
-        key = '.'
-        break;
+        key = '.'; break;
       case '-':
-        key = '-'
-        break;
+        key = '-'; break;
       case '(':
-        key = '('
-        break;
+        key = '('; break;
       case ')':
-        key = ')'
-        break;
+        key = ')'; break;
       case '0':
-        key = '0'
-        break;
+        key = '0'; break;
       case '1':
-        key = '1'
-        break;
+        key = '1'; break;
       case '2':
-        key = '2'
-        break;
+        key = '2'; break;
       case '3':
-        key = '3'
-        break;
+        key = '3'; break;
       case '4':
-        key = '4'
-        break;
+        key = '4'; break;
       case '5':
-        key = '5'
-        break;
+        key = '5'; break;
       case '6':
-        key = '6'
-        break;
+        key = '6'; break;
       case '7':
-        key = '7'
-        break;
+        key = '7'; break;
       case '8':
-        key = '8'
-        break;
+        key = '8'; break;
       case '9':
-        key = '9'
-        break;
+        key = '9'; break;
       default:
         alert('Unknown key pressed. Please try again.');
     }
@@ -265,10 +179,9 @@ var clear = function(){
 
 var answer = function(){
   var ans = $('#display').text();
-  // After research I think I'm controlling the input and that this calculator is small enough that I can safely use eval() - 12/16/17
+  // After research, I think I'm controlling the input and that this calculator is simple/small enough that I can use eval() - 12/16/17
   try{
-    ans = eval(ans);
-  }
+    ans = eval(ans); }
   catch(e){
     alert('Math ERROR! Sorry, please try your calculation again.');
     calcString = '';
