@@ -34,3 +34,10 @@ Bonus: Extra buttons were added and are functional in the calculations: '(' and 
 * Accept number pad inputs.
 * Mobile inputs interacting with a phone's number pad. Currently users can enter the various options on their device; but the input isn't going through the users phone's keyboard.
 * Create a financial calculator (most likely will be a different project).
+
+## Licensing
+
+See the file called LICENSE.
+
+### About the developer
+To see additional information and other projects please visit my [personal website](http://jdcald13.com).
