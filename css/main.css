@@ -1,0 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*Slightly round photo display*/
+.d-inline-block {
+  border-radius: 5px;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.btn-social{
+  margin: 5px;
+}
+
+footer {
+  font-size: 16px;
+  text-align: center;
+}
