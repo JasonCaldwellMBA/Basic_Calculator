@@ -134,7 +134,16 @@ var answer = function(){
     alert('Math ERROR! Sorry, please try your calculation again.');
     calcString = '';
   }
-  ans = ans.toFixed(2);
-  $('#display').text(ans);
-  calcString = ans;
+
+  roundedAns = ans.toFixed(2);
+  if (roundedAns.endsWith(00)){
+    console.log("ans");
+    $('#display').text(ans);
+    calcString = ans;
+  }
+  else {
+    $('#display').text(roundedAns);
+    console.log("roundedAns");
+    calcString = roundedAns;
+  }
 };

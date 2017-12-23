@@ -27,7 +27,7 @@ describe("Calculator Test Suite", function() {
       $("#add")[0].click();
       $("#2")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('4.00')
+      expect($("#display").text()).to.equal('4')
     });
 
     it("58+90=148", function(){
@@ -37,7 +37,7 @@ describe("Calculator Test Suite", function() {
       $("#9")[0].click();
       $("#0")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('148.00')
+      expect($("#display").text()).to.equal('148')
     });
 
     it("13+74=87", function(){
@@ -47,7 +47,7 @@ describe("Calculator Test Suite", function() {
       $("#7")[0].click();
       $("#4")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('87.00')
+      expect($("#display").text()).to.equal('87')
     });
   });
 
@@ -61,7 +61,7 @@ describe("Calculator Test Suite", function() {
       $("#subtract")[0].click();
       $("#2")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('-1.00')
+      expect($("#display").text()).to.equal('-1')
     });
 
     it("90-58=32", function(){
@@ -71,7 +71,7 @@ describe("Calculator Test Suite", function() {
       $("#5")[0].click();
       $("#8")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('32.00')
+      expect($("#display").text()).to.equal('32')
     });
 
     it("13-74=-61", function(){
@@ -81,7 +81,7 @@ describe("Calculator Test Suite", function() {
       $("#7")[0].click();
       $("#4")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('-61.00')
+      expect($("#display").text()).to.equal('-61')
     });
   });
   describe("...multiply", function() {
@@ -94,7 +94,7 @@ describe("Calculator Test Suite", function() {
       $("#multiply")[0].click();
       $("#2")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('2.00')
+      expect($("#display").text()).to.equal('2')
     });
 
     it("90*58=5220", function(){
@@ -104,7 +104,7 @@ describe("Calculator Test Suite", function() {
       $("#5")[0].click();
       $("#8")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('5220.00')
+      expect($("#display").text()).to.equal('5220')
     });
 
     it("13*74=962", function(){
@@ -114,7 +114,7 @@ describe("Calculator Test Suite", function() {
       $("#7")[0].click();
       $("#4")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('962.00')
+      expect($("#display").text()).to.equal('962')
     });
   });
   describe("...divide", function() {
@@ -127,10 +127,10 @@ describe("Calculator Test Suite", function() {
       $("#divide")[0].click();
       $("#2")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('2.50')
+      expect($("#display").text()).to.equal('2.5')
     });
 
-    it("90/58=1.5517241379310345", function(){
+    it("90/58=1.5517241379310345; rounded to 1.55", function(){
       $("#9")[0].click();
       $("#0")[0].click();
       $("#divide")[0].click();
@@ -140,7 +140,7 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('1.55')
     });
 
-    it("13/74=0.17567567567567569", function(){
+    it("13/74=0.17567567567567569; rounded to 0.18", function(){
       $("#1")[0].click();
       $("#3")[0].click();
       $("#divide")[0].click();
