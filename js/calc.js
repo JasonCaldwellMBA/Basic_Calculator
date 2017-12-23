@@ -3,7 +3,6 @@ calcString = '';
 
 var displayClick = function(e){
   var click = [];
-  console.log(click);
   if((e['target'].id) === 'equals'){
     answer();
   }
@@ -137,12 +136,10 @@ var answer = function(){
 
   roundedAns = ans.toFixed(2);
   if (roundedAns.endsWith(00)){
-    console.log("ans");
     $('#display').text(ans);
   }
   else {
     $('#display').text(roundedAns);
-    console.log("roundedAns");
   }
   calcString = '';
 };
