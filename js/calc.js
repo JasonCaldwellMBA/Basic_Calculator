@@ -135,5 +135,5 @@ var answer = function(){
     calcString = '';
   }
   $('#display').text(ans);
-  calcString = '';
+  calcString = ans;
 };
