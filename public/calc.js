@@ -70,10 +70,6 @@ var displayKB = function(e){
   else if(e.key === 'C' || e.key === 'c'){
     clear();
   }
-  else if(e.which === 48 || e.keyCode === 48){
-    e.preventDefault(); // Not a form
-    clear();
-  }
   else {
     switch(e.key){
       case '/':
