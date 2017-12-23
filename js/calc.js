@@ -139,11 +139,10 @@ var answer = function(){
   if (roundedAns.endsWith(00)){
     console.log("ans");
     $('#display').text(ans);
-    calcString = ans;
   }
   else {
     $('#display').text(roundedAns);
     console.log("roundedAns");
-    calcString = roundedAns;
   }
+  calcString = '';
 };
