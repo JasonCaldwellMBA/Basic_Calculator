@@ -71,6 +71,6 @@ footer {
   display: none;
 }
 
-/* .replay {
+#mocha .test a.replay {
   display: none;
-} */
+}
