@@ -8,10 +8,6 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="icon" href="images/portrait.jpg" />
-
-  <title> Basic Calculator </title>
   <!-- Test Dependencies -->
   <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
   <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
@@ -28,6 +24,10 @@
       mocha.run();
     });
   </script>
+  <!-- End of tests -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="icon" href="images/portrait.jpg" />
+  <title> Basic Calculator </title>
 </head>
 
 <body>
@@ -126,6 +126,8 @@
     </div>
   </nav>
 
+  <div class="row">
+    <div class="col-lg-6">
   <secion class="container">
     <h1 id="basic_calc"> Basic Calculator </h1>
     <table border="solid 1px">
@@ -164,8 +166,14 @@
       </tr>
     </table>
   </section>
+</div>
 
+  <div class="col-lg-6">
+<secion class="container">
   <div id="mocha"></div>
+</section>
+</div>
+</div>
 
   <!-- Your Calculator JS -->
   <script src="js/calc.js"></script>

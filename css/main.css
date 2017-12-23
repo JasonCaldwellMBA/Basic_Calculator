@@ -66,3 +66,11 @@ footer {
   font-size: 16px;
   text-align: center;
 }
+
+#mocha-stats {
+  display: none;
+}
+
+/* .replay {
+  display: none;
+} */
