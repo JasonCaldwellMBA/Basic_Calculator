@@ -134,6 +134,7 @@ var answer = function(){
     alert('Math ERROR! Sorry, please try your calculation again.');
     calcString = '';
   }
+  ans = ans.toFixed(2);
   $('#display').text(ans);
   calcString = ans;
 };
