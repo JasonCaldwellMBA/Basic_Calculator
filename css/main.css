@@ -15,6 +15,53 @@ body {
   margin: 5px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 300%;
+}
+
+table {
+  background-color: black;
+  background-color: white;
+  text-align: center;
+  font-size: 300%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.operator {
+  color: white;
+  background-color: blue;
+}
+
+tr {
+  background-color: white;
+}
+
+td {
+  width: 100px;
+  height: 100px;
+}
+
+#decimal, #negate {
+  background-color: white;
+  color: black;
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
+#display {
+  height: 100px;
+  background-color: lightgrey;
+}
+
+p {
+  text-align: center;
+}
+
 footer {
   font-size: 16px;
   text-align: center;
