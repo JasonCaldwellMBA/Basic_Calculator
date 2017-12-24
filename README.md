@@ -3,7 +3,7 @@
 #### December 2017
 
 ### Introduction
-This is a basic calculator that was developed with HTML, CSS, jQuery, and Mocha. It meets and/or exceeds all of the mininum requirements and stretch goals for this project. Both mouse and keyboard inputs are accepted from the user. Also included is error checking and test cases.
+This is a basic calculator that was developed with HTML, CSS, jQuery, and Mocha. It meets and/or exceeds all of the mininum requirements and stretch goals for this project. Mouse, touch, keyboard, and numeric keypad inputs are accepted from the user. Also included is error checking and test cases.
 
 ### Minimum Requirements
 [✓]: The calculator has a screen which displays numbers input by the user, or a summed total based on mathematical operations.  
@@ -27,13 +27,9 @@ Bonus: Extra buttons were added and are functional in the calculations: '(' and 
 ### Stretch Goals
 [✓]: Handles decimals.  
 
-[✓]: Users can enter values/perform math with keyboard input (keypress).  
+[✓]: Users can enter values/perform math with keyboard input (keypress). 
 
-
-### Future enhancements
-* Accept number pad inputs.
-* Mobile inputs interacting with a phone's number pad. Currently users can enter the various options on their device; but the input isn't going through the users phone's keyboard.
-* Create a financial calculator (most likely will be a different project).
+Bonus: Numeric keypad values and operators can be used.
 
 ## Licensing
 
