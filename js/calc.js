@@ -65,9 +65,53 @@ var displayKB = function(e){
   if((e.key === '=') || (e.which === 13 || e.keyCode === 13)){
     answer();
   }
-  // Unable to get delete key to clear
   else if(e.key === 'C' || e.key === 'c'){
     clear();
+  }
+  else if (e.which === 96 || e.keyCode === 96){
+    key = '0';
+  }
+  else if (e.which === 97 || e.keyCode === 97){
+    key = '1';
+  }
+  else if (e.which === 98 || e.keyCode === 98){
+    key = '2';
+  }
+  else if (e.which === 99 || e.keyCode === 99){
+    key = '3';
+  }
+  else if (e.which === 100 || e.keyCode === 100){
+    key = '4';
+  }
+  else if (e.which === 101 || e.keyCode === 101){
+    key = '5';
+  }
+  else if (e.which === 102 || e.keyCode === 102){
+    key = '6';
+  }
+  else if (e.which === 103 || e.keyCode === 103){
+    key = '7';
+  }
+  else if (e.which === 104 || e.keyCode === 104){
+    key = '8';
+  }
+  else if (e.which === 105 || e.keyCode === 105){
+    key = '9';
+  }
+  else if (e.which === 106 || e.keyCode === 106){
+    key = '*';
+  }
+  else if (e.which === 107 || e.keyCode === 107){
+    key = '+';
+  }
+  else if (e.which === 109 || e.keyCode === 109){
+    key = '-';
+  }
+  else if (e.which === 110 || e.keyCode === 110){
+    key = '.';
+  }
+  else if (e.which === 111 || e.keyCode === 111){
+    key = '/';
   }
   else {
     switch(e.key){
