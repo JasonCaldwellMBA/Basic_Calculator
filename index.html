@@ -3,34 +3,33 @@
 
 <head>
   <meta charset="utf-8">
+  <!-- Different screen size code -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <!-- Web Font -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+  <!-- Social media buttons -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
   <!-- Test Dependencies -->
   <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
   <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
-  <script>
-    mocha.ui('bdd');
-    mocha.reporter('html');
-    var expect = chai.expect;
-  </script>
+  <script src="js/mocha.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/test.js"></script>
-  <script>
-    window.addEventListener('load', function() {
-      mocha.run();
-    });
-  </script>
-  <!-- End of tests -->
+
+  <!-- Styling and title bar -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="icon" href="images/portrait.jpg" />
   <title> Caldwell | Calculator </title>
 </head>
 
 <body>
+  <!-- ======================= Start Navbar ================================= -->
   <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
     <a class="navbar-brand" href="http://18.220.208.40/" target="_blank">
         <img src="images/portrait.jpg" width="30" height="30" class="d-inline-block align-top" alt="Headshot of Jason Caldwell in suit and tie"> Jason Caldwell
@@ -125,10 +124,11 @@
         </a>
     </div>
   </nav>
+  <!-- ============================ End Nav ================================= -->
 
   <secion class="container">
     <h1 id="basic_calc"> Calculator </h1>
-    <p> Mouse and keyboard inputs are accepted. Tests are below the calculator on mobile displays. </p>
+    <p> Mouse, keyboard, and numeric keypad inputs are accepted. Tests are below the calculator on mobile displays. </p>
     <div class="row">
       <div class="col-lg-2"></div>
       <div class="col-lg-4">
