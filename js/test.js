@@ -1,5 +1,3 @@
-console.log("LOADED TEST FILE")
-
 describe("Calculator Test Suite", function() {
   describe("...Clear Display...", function(){
     it("clears the display", function() {
@@ -238,8 +236,8 @@ describe("Calculator Test Suite", function() {
       $("#equals")[0].click();
       expect($("#display").text()).to.equal('13.20')
     });
-
   });
+
   describe("...Division Tests...", function() {
     afterEach(function(){
       $("#clear")[0].click();
@@ -306,6 +304,106 @@ describe("Calculator Test Suite", function() {
       $("#5")[0].click();
       $("#equals")[0].click();
       expect($("#display").text()).to.equal('260000')
+    });
+  });
+
+  describe("...Order of Operation Tests...", function() {
+    afterEach(function(){
+      $("#clear")[0].click();
+    });
+
+    it("6 + 7 * 8 = 62", function() {
+      $("#6")[0].click();
+      $("#add")[0].click();
+      $("#7")[0].click();
+      $("#multiply")[0].click();
+      $("#8")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('62')
+    });
+
+    it("16 ÷ 8 - 2 = 0", function(){
+      $("#1")[0].click();
+      $("#6")[0].click();
+      $("#divide")[0].click();
+      $("#8")[0].click();
+      $("#subtract")[0].click();
+      $("#2")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('0')
+    });
+
+    it("(25 - 11) * 3 = 42", function(){
+      $("#parenOpen")[0].click();
+      $("#2")[0].click();
+      $("#5")[0].click();
+      $("#subtract")[0].click();
+      $("#1")[0].click();
+      $("#1")[0].click();
+      $("#parenClose")[0].click();
+      $("#multiply")[0].click();
+      $("#3")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('42')
+    });
+
+    it("9 - 0.50 ÷ (8 - 3) * 2 + 6 = 14.80", function() {
+      $("#9")[0].click();
+      $("#subtract")[0].click();
+      $("#0")[0].click();
+      $("#decimal")[0].click();
+      $("#5")[0].click();
+      $("#divide")[0].click();
+      $("#parenOpen")[0].click();
+      $("#8")[0].click();
+      $("#subtract")[0].click();
+      $("#3")[0].click();
+      $("#parenClose")[0].click();
+      $("#multiply")[0].click();
+      $("#2")[0].click();
+      $("#add")[0].click();
+      $("#6")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('14.80')
+    });
+
+    it("9.9 ÷ 3.3 + 5 = 8", function(){
+      $("#9")[0].click();
+      $("#decimal")[0].click();
+      $("#9")[0].click();
+      $("#divide")[0].click();
+      $("#3")[0].click();
+      $("#decimal")[0].click();
+      $("#3")[0].click();
+      $("#add")[0].click();
+      $("#5")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('8')
+    });
+
+    it("(9.6 + 4.8) ÷ (6.05 - 3.8) = 6.40", function(){
+      $("#parenOpen")[0].click();
+      $("#9")[0].click();
+      $("#decimal")[0].click();
+      $("#6")[0].click();
+      $("#add")[0].click();
+      $("#4")[0].click();
+      $("#decimal")[0].click();
+      $("#8")[0].click();
+      $("#parenClose")[0].click();
+      $("#divide")[0].click();
+      $("#parenOpen")[0].click();
+      $("#6")[0].click();
+      $("#decimal")[0].click();
+      $("#0")[0].click();
+      $("#5")[0].click();
+      $("#subtract")[0].click();
+      $("#3")[0].click();
+      $("#decimal")[0].click();
+      $("#8")[0].click();
+      $("#parenClose")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('6.40')
     });
   });
 });
