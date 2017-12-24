@@ -68,6 +68,11 @@ var displayKB = function(e){
   else if(e.key === 'C' || e.key === 'c'){
     clear();
   }
+  // Delete key doesn't register on mac. Seeing if any of these work on Windows
+  else if (e.which === 8 || e.keyCode === 8 || e.which === 46 || e.keyCode === 46 || e.which === 127 || e.keyCode === 127){
+    console.log("Delete");
+    key = calcString.substring(0, str.length - 1);
+  }
   else if (e.which === 96 || e.keyCode === 96){
     key = '0';
   }
