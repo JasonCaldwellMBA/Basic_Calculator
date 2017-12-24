@@ -135,7 +135,7 @@ var answer = function(){
   }
 
   roundedAns = ans.toFixed(2);
-  if (roundedAns.endsWith(00)){
+  if (roundedAns.endsWith('.00')){
     $('#display').text(ans);
   }
   else {

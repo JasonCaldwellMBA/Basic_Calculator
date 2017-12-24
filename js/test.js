@@ -50,7 +50,7 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('87')
     });
 
-    it("2.9 + 2.2 = 5.1", function() {
+    it("2.90 + 2.20 = 5.10", function() {
       $("#2")[0].click();
       $("#decimal")[0].click();
       $("#9")[0].click();
@@ -59,10 +59,10 @@ describe("Calculator Test Suite", function() {
       $("#decimal")[0].click();
       $("#2")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('5.1')
+      expect($("#display").text()).to.equal('5.10')
     });
 
-    it("0.8 + 9.0 = 9.8", function(){
+    it("0.80 + 9.00 = 9.80", function(){
       $("#0")[0].click();
       $("#decimal")[0].click();
       $("#8")[0].click();
@@ -71,7 +71,7 @@ describe("Calculator Test Suite", function() {
       $("#decimal")[0].click();
       $("#0")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('9.8')
+      expect($("#display").text()).to.equal('9.80')
     });
 
     it("0.13 + 0.74 = 0.87", function(){
@@ -122,15 +122,15 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('-61')
     });
 
-    // it("1.8 - 2 = -0.2", function() {
-    //   $("#1")[0].click();
-    //   $("#decimal")[0].click();
-    //   $("#8")[0].click();
-    //   $("#subtract")[0].click();
-    //   $("#2")[0].click();
-    //   $("#equals")[0].click();
-    //   expect($("#display").text()).to.equal('-0.2')
-    // });
+    it("1.80 - 2 = -0.20", function() {
+      $("#1")[0].click();
+      $("#decimal")[0].click();
+      $("#8")[0].click();
+      $("#subtract")[0].click();
+      $("#2")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('-0.20')
+    });
 
     it("90 - 0.58 = 89.42", function(){
       $("#9")[0].click();
@@ -202,7 +202,7 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('962')
     });
 
-    it("0.4 * 0.4 = 0.16", function() {
+    it("0.40 * 0.40 = 0.16", function() {
       $("#0")[0].click();
       $("#decimal")[0].click();
       $("#4")[0].click();
@@ -214,7 +214,7 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('0.16')
     });
 
-    it("9.02 * 5.8 = 52.316; rounded to 52.32", function(){
+    it("9.02 * 5.80 = 52.316; rounded to 52.32", function(){
       $("#9")[0].click();
       $("#decimal")[0].click();
       $("#0")[0].click();
@@ -227,29 +227,30 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('52.32')
     });
 
-    // it("-4.4 * -3 = 13.2", function(){
-    //   $("#negate")[0].click();
-    //   $("#4")[0].click();
-    //   $("#decimal")[0].click();
-    //   $("#4")[0].click();
-    //   $("#multiply")[0].click();
-    //   $("#negate")[0].click();
-    //   $("#3")[0].click();
-    //   $("#equals")[0].click();
-    //   expect($("#display").text()).to.equal('13.2')
-    // });
+    it("-4.40 * -3 = 13.2", function(){
+      $("#negate")[0].click();
+      $("#4")[0].click();
+      $("#decimal")[0].click();
+      $("#4")[0].click();
+      $("#multiply")[0].click();
+      $("#negate")[0].click();
+      $("#3")[0].click();
+      $("#equals")[0].click();
+      expect($("#display").text()).to.equal('13.20')
+    });
+
   });
   describe("...Division Tests...", function() {
     afterEach(function(){
       $("#clear")[0].click();
     });
 
-    it("5 ÷ 2 = 2.5", function() {
+    it("5 ÷ 2 = 2.50", function() {
       $("#5")[0].click();
       $("#divide")[0].click();
       $("#2")[0].click();
       $("#equals")[0].click();
-      expect($("#display").text()).to.equal('2.5')
+      expect($("#display").text()).to.equal('2.50')
     });
 
     it("90 ÷ 58 = 1.5517241379310345; rounded to 1.55", function(){
@@ -272,7 +273,7 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('0.18')
     });
 
-    it("0.5 ÷ 2 = 0.25", function() {
+    it("0.50 ÷ 2 = 0.25", function() {
       $("#0")[0].click();
       $("#decimal")[0].click();
       $("#5")[0].click();
@@ -282,7 +283,7 @@ describe("Calculator Test Suite", function() {
       expect($("#display").text()).to.equal('0.25')
     });
 
-    it("9.9 ÷ 0 = Infinity; in javascript", function(){
+    it("9.90 ÷ 0 = Infinity; in javascript", function(){
       $("#9")[0].click();
       $("#decimal")[0].click();
       $("#9")[0].click();
